@@ -12,7 +12,7 @@ class CompositionAnalysis:
                  bar_limit: int=7,
                  total_attributes_limit: int=21,
                  bar_colors: dict=None):
-        self.dataframe = dataframe
+        self.dataframe = dataframe.copy()
         self.title = title
         self.bar_limit = bar_limit
         self.bar_size = bar_size
