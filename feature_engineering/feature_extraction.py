@@ -2,7 +2,7 @@ import pandas as pd
 
 class FeatureExtraction:
     """This extracts the relevant features from available data file."""
-    def __init__(self, fname: str, province_name: str):
+    def __init__(self, fname: str, province_name: str="Bagmati Province"):
         self.fname = fname
         self.province_name = province_name
 
@@ -13,7 +13,7 @@ class FeatureExtraction:
     
     def rename_label(self, dataframe: pd.DataFrame) -> pd.DataFrame:
         """This will rename the columns with meaningful names."""
-        dataframe = dataframe.fillna('')
+        dataframe = dataframe.fillna('').copy()
         rename_dict = {
             "Province 1" : "SN",
             "Unnamed: 1" : "Local Body",
@@ -63,13 +63,17 @@ class FeatureExtraction:
         dataframe = dataframe.iloc[:, list(range(2)) + list(range(6, 11))].copy()
         return dataframe
     
-    def fit(self):
+    def extract_individual(self):
         """Main implementation"""
         df = self.open_file()
-        print("Original DataFrame:", df.head())  
+        print("Original data extracted successfully☺️") 
         df_renamed = self.rename_label(df)
-        print("Renamed DataFrame:", df_renamed.head())  
+        print("DataFrame Renamed successfully☺️")  
         df_rows = self.extract_rows_for_province(df_renamed)
         df_budget = self.extract_budget_frame(df_rows)
         df_expenditure = self.extract_expenditure_frame(df_rows)
+        print("ALL THE OPERSTIONS WERE SUCCESSFUL😊")
         return df_budget, df_expenditure
+    
+
+
