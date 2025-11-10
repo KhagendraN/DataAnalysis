@@ -8,19 +8,22 @@ The project analyzes budget vs. expenditure data for local bodies across differe
 
 * **Composition Charts**: Visualizations comparing the budget and expenditure for each local body.
 * **Utilization Comparisons**: Analysis of budget utilization across different local bodies and provinces.
-* **Local-body Summaries**: Detailed pie charts and summary statistics for each local body.
+* **Local-body Summaries**: Detailed pie charts and summary statistics for each province.
+
+---
+- [Find Charts](https://github.com/KhagendraN/DataAnalysis/tree/main/charts)  
 
 ## Data
 
-* **Primary Dataset**: `data/Expenditure-of-local-bodies.xlsx` (FY 2021-22)
+* **Primary Dataset**: [Find here](https://github.com/KhagendraN/DataAnalysis/tree/main/data)
 
 ## Project Structure
 
 The project is organized into the following directories:
 
-* **`feature_engineering/`**: Contains scripts for reading, cleaning, and feature extraction from the raw data.
-* **`visualization/`**: Includes helper functions for plotting various charts, such as composition bars, pie charts, and utilization plots.
-* **`notebooks/`**: Contains Jupyter notebooks for province-level analysis (e.g., `koshi_province.ipynb`) and an overall observation notebook (`overall_observation.ipynb`).
+* [**`feature_engineering/`**](https://github.com/KhagendraN/DataAnalysis/tree/main/feature_engineering): Contains scripts for reading, cleaning, and feature extraction from the raw data.
+* [**`visualization/`**](https://github.com/KhagendraN/DataAnalysis/tree/main/visualization): Includes helper functions for plotting various charts, such as composition bars, pie charts, and utilization plots.
+* [**`notebooks/`**](https://github.com/KhagendraN/DataAnalysis/tree/main/notebooks): Contains Jupyter notebooks for province-level analysis [`koshi_province.ipynb`](https://github.com/KhagendraN/DataAnalysis/blob/main/notebooks/koshi_province.ipynb) and an overall observation notebook ([`overall_observation.ipynb`](https://github.com/KhagendraN/DataAnalysis/blob/main/notebooks/overall_obs.ipynb)).
 
 ## Getting Started
 
@@ -40,7 +43,7 @@ pip install -r requirements.txt
 
 ### 3. Run the Notebooks
 
-Open the relevant Jupyter notebook (e.g., `notebooks/province1.ipynb`) and execute the cells sequentially from top to bottom.
+Open the relevant Jupyter notebook (e.g., [`notebooks/province1.ipynb`](https://github.com/KhagendraN/DataAnalysis/blob/main/notebooks/koshi_province.ipynb)) and execute the cells sequentially from top to bottom.
 
 ## Notes
 
@@ -52,4 +55,12 @@ Open the relevant Jupyter notebook (e.g., `notebooks/province1.ipynb`) and execu
 
 ---
 
+## Charts
+
+![Budget and Expenditure Analysis Overview](charts/output.gif)
+
+---
+
 Enjoy exploring the data and uncovering insights!
+
+
