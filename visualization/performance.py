@@ -43,7 +43,7 @@ class PerformanceAnalysis:
 
         #  Data Preparation
         self.dataframe_expense['Utilization_Rate'] = (self.dataframe_expense['Total'] / self.dataframe_budget['Total']) * 100
-        self.dataframe_expense['Utilization_Rate'] = self.dataframe_expense['Utilization_Rate'].fillna(0)
+        self.dataframe_expense['Utilization_Rate'] = self.dataframe_expense['Utilization_Rate'].fillna(0).infer_objects(copy=False)
         
         # Slice and Sort Data
         df_sorted = self.dataframe_expense.sort_values(by='Utilization_Rate', ascending=False)
@@ -92,7 +92,7 @@ class PerformanceAnalysis:
             
             # Show the plot for the current chunk
             plt.tight_layout()
-            plt.legend()
+            #plt.legend()
             plt.show()
 
 

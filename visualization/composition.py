@@ -35,8 +35,8 @@ class CompositionAnalysis:
             raise ValueError(f"Missing columns in dataframe: {', '.join(missing_feature)}")
         
         # check if total_attributes_limit > total local bodies
-        if self.total_attribute_limit > len(self.dataframe["Local Body"]):
-            raise ValueError(f"Invalid : {self.total_attribute_limit} > {len(self.dataframe["Local Body"])}")
+        if self.total_attribute_limit > len(self.dataframe['Local Body']):
+            raise ValueError(f"Invalid : {self.total_attribute_limit} > {len(self.dataframe['Local Body'])}")
         
         # Fill NaN values in 'Total' column
         self.dataframe["Total"] = self.dataframe["Total"].fillna(0)
